@@ -15,6 +15,19 @@
 ?>
 <?php get_header(); ?>
 
+<div id="ww">
+      <div class="container">
+      <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 centered">
+      
+                        <img width="155" height="155" src="https://github.com/ppamorim/ppamorim/blob/master/art/me.png?raw=true" class="attachment-post-thumbnail wp-post-image" alt="user" />                    <h1> Olá!</h1>
+           <p>Me chamo Pedro Paulo, mas pode me chamar somente de Pedro.<br>Desenvolvo para Android e iOS e sempre busco em inovar com ideias criativas e na máxima qualidade das minhas criações</p>
+
+                          </div><!-- /col-lg-8 -->
+               </div><!-- /row -->
+      </div> <!-- /container -->
+  </div><!-- /ww -->
+
  <?php global $more; $more = 0; ?>
 
 
@@ -40,24 +53,27 @@ $color_id = 'grey';
 
 <?php while (have_posts()) : the_post(); ?>
 
-<?php
-       $c++; // increment the counter
-       if( $c % 2 != 0) {
-        $color_id = 'grey';
-      } else {
-        $color_id = 'white'; }
-        ?>
+      <?php
+        $c++; // increment the counter
+        if( $c % 2 != 0) {
+          $color_id = 'grey';
+        } else {
+          $color_id = 'white';
+        }
+      ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+         
+
          <div id="<?php echo $color_id ?>">
+
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 col-lg-offset-2">
+              <div class="col-lg-9 col-lg-offset-2">
 
-                <section class="post-meta">          
-                    <p class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?><ba><?php the_author_meta( 'display_name' ); ?></ba></p>
-                       <p><bd><time class="post-date"><?php the_date(); ?></time></bd></p>                
+                <section class="post-meta">
+                    <p><bd><time class="post-date"><?php the_date(); ?></time></bd></p>                
                 </section><!-- end of .post-meta -->
 
 
